@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="Cssamazing/Home.css" />
+
+  <link rel="stylesheet" href="Cssamazing/Style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <title>Amazing Event</title>
+</head>
+
+<body>
+  <!--barra de navegacion-->
+
+  <header class="header" id="#header">
+    <div class="logo">
+      <img src="images/Logo Amazing Events.png" alt="" />
+    </div>
+
+    <div class="barra-nav">
+      <nav>
+        <ul>
+          <li><a class="nav" href="#" id="home">Inicio</a></li>
+          <li><a class="nav" href="#" id="upcoming">Eventos Futuros</a></li>
+          <li><a class="nav" href="#" id="past">Eventos Pasados</a></li>
+          <li><a href="./contact.html" id="contact">Contactos</a></li>
+          <li><a href="./stats.html" id="stats">Estadisticas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav-principal">
+    
+    <h2 id="textonav"></h2>
+    
+  </div>
+
+
+
+
+
+
+
+  <!-- la parte de categoria -->
+
+  <main class="categoria">
+    <section>
+      <form class="category-main" id="categoriaevento">
+        <input type="checkbox">
+      </form>
+    </section>
+
+
+    <section class="searchcategoria">
+      <input type="text" id="inputSearch" placeholder="busca tu evento preferido" />
+
+      <div id="form"></div>
+      <main id="eventos"></main>
+    </section>
+  </main>
+
+  <!-- cartas eventos y cartas detalles -->
+  <section>
+    <div class="grid-container" id="loseventos">
+    </div>
+
+    <div class="details" id="eventsdetails">
+    </div>
+  </section>
+
+
+
+  <!--iniciando el footer-->
+
+
+  <footer id="contacto">
+    <div class="footer-content">
+      <div class="social-media">
+        <a href="#" class="social-media-icon">
+          <i class="bx bxl-instagram"></i>
+        </a>
+        <a href="#" class="social-media-icon">
+          <i class="bx bxl-facebook"></i>
+        </a>
+        <a href="#" class="social-media-icon">
+          <i class="bx bxl-whatsapp"></i>
+        </a>
+      </div>
+
+      <div class="cohort-footer">
+        <img src="images/favicon.png" alt="">
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="./script.js"></script>
+  </body>
+
+</html>

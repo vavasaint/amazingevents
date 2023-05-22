@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="Cssamazing/Home.css" />
+    <link rel="stylesheet" href="Cssamazing/Style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <title>Amazing Event</title>
+</head>
+
+<body>
+  <!--barra de navegación-->
+  
+  <header class="header" id="#header">
+    <div class="logo">
+      <img src="images/Logo Amazing Events.png" alt="" />
+    </div>
+    
+    <div class="barra-nav">
+      <nav>
+        <ul>
+          <li><a class="nav" href="./home.html?time=home" id="home">Inicio</a></li>
+          <li><a class="nav" href="./home.html?time=upcoming" id="upcoming">Eventos Futuros</a></li>
+          <li><a class="nav" href="./home.html?time=past" id="past"> Eventos Pasados</a></li>
+          <li><a href="./contact.html" id="contact">Contactos</a></li>
+          <li><a href="./stats.html" id="stats">Estadisticas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  
+  <div class="nav-principal">
+      
+      <h2 >Estadisticas</h2>
+      
+    </div>
+  
+
+    <!--iniciando la tabla-->
+    <div class="tablestats">
+
+      <table>
+
+        <th class="colspan" colspan="3">Estadisticas de Eventos</th>
+        </tr>
+        <tr class="tittlestats">
+          <th>Eventos con Mayor Porcentaje de Asistencia</th>
+          <th>Eventos con Mayor Porcentaje de Asistencia</th>
+          <th>Eventos con Mayor capacitad</th>
+        </tr>
+
+        <tr id="statstable"></tr>
+      </table>
+
+
+      <table id="statsFuturos">
+        <tr>
+          <th class="colspan" colspan="3">Estadisticas De Eventos Futuros por Categoria</th>
+        </tr>
+        <tr>
+          <th>Categoria</th>
+          <th>Estimacion De Ingreso</th>
+          <th>Asistencia Estimada</th>
+        </tr>
+      </table>
+
+
+      <table id="statsPasados">
+        <tr>
+          <th class="colspan" colspan="3">Estadisticas De Eventos Pasados por Categoria</th>
+        </tr>
+        <tr>
+          <th>Categoria</th>
+          <th> Ingreso </th>
+          <th>Asistencia </th>
+        </tr>
+      </table>
+
+    </div>
+
+
+
+
+    <!--iniciando el footer-->
+
+    <footer id="contacto">
+      <div class="footer-content">
+        <div class="social-media">
+          <a href="#" class="social-media-icon">
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a href="#" class="social-media-icon">
+            <i class="bx bxl-facebook"></i>
+          </a>
+          <a href="#" class="social-media-icon">
+            <i class="bx bxl-whatsapp"></i>
+          </a>
+        </div>
+
+        <div class="cohort-footer">
+          <img src="images/favicon.png" alt="">
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="./stats.js"></script>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+/* Style card*/
+.grid-container {
+    display: flex;
+    justify-content: center;
+    grid-gap: 18px;
+    flex-wrap: wrap;
+    grid-template-columns: repeat;
+    margin: 30px auto;
+
+}
+
+.grid-element {
+    display: flex;
+    flex-direction: column;
+    width: 225px;
+    padding: 5px;
+    height: 330px;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: -1px -1px 5px 3px rgb(4, 2, 2);
+
+}
+
+.grid-element img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.fiesta {
+    font-weight: bold;
+}
+
+.titlecard {
+    margin: 5px;
+    background-color: white;
+
+
+}
+
+.vermas{
+ background-color:rgb(242, 154, 169);   
+}
+/* style for details */
+.grid-contain {
+    display: flex;
+    gap: 20px;
+    width: 695px;
+    padding: 25px;
+    height: 347px;
+    margin: 50px auto;
+    border: solid 1px;
+    box-shadow: -1px -1px 5px 6px rgb(242, 154, 169);
+}
+
+
+
+.fiestacol {
+    font-weight: bold;
+    text-align: center;
+}
+
+.details {
+    display: flex;
+    gap: 30px;
+    margin: 30px;
+    text-align: center;
+    flex-direction: column;
+
+
+}
+
+.date {
+    font-weight: bold;
+}
+
+.price {
+    
+    background-color: rgb(242, 154, 169);
+}
+
+.descrip {
+    margin: 10px;
+}
+
+/*reponsive details*/
+@media only screen and (min-width:320px)and (max-width:576px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 20px;
+        border: none;
+    }
+
+
+
+    .grid-contain {
+        display: flex;
+        flex-direction: column;
+       width: 257px;
+        height: 575px;
+        justify-content: center;
+         box-shadow: -1px -1px 3px 3px rgb(242, 154, 169);
+        
+        border: none;
+        text-align: center;
+        
+    }
+
+    
+
+    .details {
+        flex-direction: column;
+    }
+
+    .grid-elementos img {
+        width: 200px;
+        height: 180px;
+        object-fit: cover;
+        object-position: center;
+        ;
+    }
+
+}
+
+
+
+/*Responsive cards */
+@media only screen and (min-width:600px)and (max-width:1080px) {
+
+    .grid-element {
+        padding: 0px;
+        font-size: small;
+    }
+
+    .grid-element img {
+        max-width: 230px;
+        height: 130px;
+        object-fit: cover;
+        object-position: center;
+    }
+   
+}
