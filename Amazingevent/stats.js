@@ -8,7 +8,7 @@ async function inicioData(){
   eventos = data.eventos
   
 inicioStats(eventos)
-  
+
   }
 
   inicioData()

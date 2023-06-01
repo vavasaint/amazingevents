@@ -4,6 +4,8 @@ var inputSearch = document.getElementById("inputSearch")
 var arrayFilter = []
 var search = ""
 var textonav = document.getElementById("textonav")
+var form = document.getElementById("form")
+var flechaNav = []
 
 async function inicioData() {
     let data
@@ -27,7 +29,8 @@ inicioData()
 var buttonNav = document.getElementsByClassName("nav"); //captura elementos con class nav//
 for (var i = 0; i < buttonNav.length; i++) {
     const element = buttonNav[i];
- element.addEventListener("click", function (e) { //recorre y agrega el evento click//
+    flechaNav.push(buttonNav[i].innerText)
+    element.addEventListener("click", function (e) { //recorre y agrega el evento click//
 
         navegacion(e.target.id);
 
@@ -47,6 +50,7 @@ function navegacion(id) {
             filtrarCheckbox(eventosFuturos)
             arrayFilter = (eventosFuturos)
             textonav.innerHTML = "Eventos Futuros"
+            
             break;
 
         case "past":
@@ -55,9 +59,11 @@ function navegacion(id) {
             filtrarCheckbox(eventosPasados)
             arrayFilter = (eventosPasados)
             textonav.innerHTML = "Eventos Pasados"
+            
             break;
 
-        
+    
+
         default:
             display(eventos)
             filtrarCheckbox(eventos)
@@ -69,6 +75,97 @@ function navegacion(id) {
     }
 }
 
+
+
+
+// filtro flechas
+
+
+var buttonIzq = document.getElementById("flechaizq")
+buttonIzq.addEventListener("click", function (e) {
+    var paginaIzq = document.getElementById("textonav").innerText
+    if (flechaNav.indexOf(paginaIzq) <= 4) {
+        pagAnterior(flechaNav.indexOf(paginaIzq) - 1);
+    } else {
+        pagAnterior(0)
+    }
+})
+
+function pagAnterior(i) {
+    switch (i) {
+         case 0:
+            navegacion("home")
+            document.getElementById("textonav").innerHTML = flechaNav[i]
+            break;
+
+
+        case 1:
+            navegacion ("upcoming")
+            document.getElementById("textonav").innerHTML = flechaNav[i]
+            break;
+
+
+        case 2:
+            navegacion ("past")
+            document.getElementById("textonav").innerHTML = flechaNav[i]
+            break;
+
+        case 3:
+            navegacion("contact")
+            document.getElementById("textonav").innerHTML = flechaNav[i]
+            break;
+
+        default:("stats")
+            navegacion
+    }
+
+}
+
+
+
+
+
+
+var buttonDer = document.getElementById("flechader")
+buttonDer.addEventListener("click", function (e) {
+    var paginaDer = document.getElementById("textonav").innerText
+
+    if (flechaNav.indexOf(paginaDer) < 4) {
+        pagNext(flechaNav.indexOf(paginaDer) + 1);
+    } else {
+        pagNext(0)
+    }
+})
+function pagNext(i) {
+    switch (i) {
+
+        case 0:
+            navegacion("home")
+            document.getElementById("textonav").innerHTML = flechaNav[i]
+            break;
+
+
+        case 1:
+            navegacion("upcoming")
+            document.getElementById("textonav").innerHTML = flechaNav[i]
+            break;
+
+
+        case 2:
+            navegacion("past")
+            document.getElementById("textonav").innerHTML = flechaNav[i]
+            break;
+
+        case 3:
+            navegacion("contact")
+            document.getElementById("textonav").innerHTML = flechaNav[i]
+            break;
+
+        default:
+            navegacion("stats")
+    }
+
+}
 
 
 //filtro cartas//
@@ -109,6 +206,7 @@ function rutas() {
         case "past": navegacion("past")
             break;
 
+        
         default: navegacion("home")
 
     }
@@ -160,7 +258,7 @@ function checkboxListener() {
                     checkedCheckboxes.push(checkboxs[i].value)
                 }
             }
-            
+
             filtrosCombinados()
         })
     }
